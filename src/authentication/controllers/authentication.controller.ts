@@ -6,10 +6,10 @@ import {
   ApiTags,
   PartialType,
 } from '@nestjs/swagger';
-import { User } from '../../users/entities/user.entity';
+import { User } from '../../users/entities/users.entity';
 import { RegistrationDto } from '../dtos/registration.dto';
 import { AuthenticationService } from '../services';
-import { CreateUserDto } from 'src/users/dto/create-user.dto';
+import { CreateUsersInput } from 'src/users/dto/create-users.input';
 
 @Controller('Authentication')
 @ApiTags('Authentication')
@@ -19,7 +19,7 @@ export class AuthenticationController {
   @Post('registration')
   @HttpCode(HttpStatus.OK)
   @ApiOkResponse({
-    type: PartialType(CreateUserDto),
+    type: PartialType(CreateUsersInput),
     description: 'Successfully created user',
   })
   @ApiBadRequestResponse({

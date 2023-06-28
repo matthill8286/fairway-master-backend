@@ -1,1 +1,1 @@
-export * from './ImageProcessing';
+export * from './image-processing.service';

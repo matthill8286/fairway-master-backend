@@ -1,0 +1,24 @@
+type Scorecards {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateScorecardsInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateScorecardsInput {
+  id: Int!
+}
+
+type Query {
+  scorecards: [Scorecards]!
+  scorecards(id: Int!): Scorecards
+}
+
+type Mutation {
+  createScorecards(createScorecardsInput: CreateScorecardsInput!): Scorecards!
+  updateScorecards(updateScorecardsInput: UpdateScorecardsInput!): Scorecards!
+  removeScorecards(id: Int!): Scorecards
+}

@@ -1,5 +1,5 @@
 import { Body, Injectable, Post } from '@nestjs/common';
-import { User } from 'src/users/entities/user.entity';
+import { User } from 'src/users/entities/users.entity';
 import { UsersService } from 'src/users/users.service';
 
 @Injectable()
